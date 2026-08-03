@@ -39,9 +39,6 @@ def load_config() -> Config:
     file_values = _load_config_json()
 
     synap_api_key = file_values.get("MAXIMEM_API_KEY") or os.environ.get("SYNAP_API_KEY")
-    # INSTANCE_NAME is a human-readable label, not the "inst_<hex16>" instance
-    # id the SDK expects -- so it's kept only for display, and instance_id is
-    # left empty for the SDK to auto-resolve from the API key at initialize().
     instance_name = file_values.get("INSTANCE_NAME", "")
     openai_api_key = os.environ.get("OPENAI_API_KEY")
 
