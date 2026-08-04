@@ -100,7 +100,7 @@ async def main() -> None:
         )
 
         print(f"\n  Okta fact reached Jordan without re-explaining: {proves_sharing}")
-        print(f"  Maria's 'terse replies' preference stayed private:  {proves_isolation}")
+        print(f" Maria's 'terse replies' preference stayed private:  {proves_isolation}")
 
         jordan_reply = await llm.generate_reply(
             jordan_message,
